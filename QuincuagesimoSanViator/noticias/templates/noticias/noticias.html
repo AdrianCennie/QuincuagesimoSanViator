@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+<!--Contenido-->
+{% block content %} 
+<h1> Esto es la página sobre las noticias</h1>
+
+{% endblock %}
+    {% for noticia in noticias %}
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{noticia.image.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{noticia.title}}</h2>   
+    <p>{{noticia.descripcion}}</p>
+  </div>
+</div>
+</div>
+    {% endfor %}
